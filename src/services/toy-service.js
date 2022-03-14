@@ -11,8 +11,8 @@ export const toyService = {
     getEmptyToy
 }
 
-function query() {
-    return axios.get(TOY_URL)
+function query(filterBy) {
+    return axios.get(TOY_URL, { params: filterBy })
         .then(res => res.data)
 }
 

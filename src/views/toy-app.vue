@@ -1,6 +1,6 @@
 <template>
     <section class="main-layout main-content">
-        <toy-filter />
+        <toy-filter @setFilter="setFilter" />
         <toy-list v-if="toys" :toys="toys" />
     </section>
 </template>
@@ -11,14 +11,10 @@ import toyList from '../components/toy-list.vue'
 export default {
     created() {
         console.log('app created');
-        this.$store.dispatch('loadToys')
-            .then(toys => {
-                this.toys = this.$store.getters.getToys
-            })
+        this.$store.dispatch({type: 'loadToys', filterBy: ''})
     },
     data() {
         return {
-            toys: [],
             filterBy: {}
         }
     },
@@ -26,6 +22,16 @@ export default {
         toyFilter,
         toyList
     },
+    methods: {
+        setFilter(filterBy) {
+            this.$store.dispatch({type: 'loadToys', filterBy})
+        },
+    },
+    computed: {
+        toys() {
+            return this.$store.getters.getToys
+        }
+    }
 }
 </script>
 

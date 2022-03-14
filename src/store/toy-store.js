@@ -3,7 +3,8 @@ import { toyService } from '../services/toy-service.js'
 export const toyStore = {
     state: {
         toys: [],
-        currToy: {}
+        currToy: {},
+        labels: ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor", "Battery powered"]
     },
     getters: {
         getToys(state) {
@@ -12,6 +13,9 @@ export const toyStore = {
         getCurrToy(state) {
             return JSON.parse(JSON.stringify(state.currToy))
         },
+        getLabels(state) {
+            return state.labels
+        }
     },
     mutations: {
         setToys(state, { toys }) {
@@ -35,8 +39,8 @@ export const toyStore = {
         }
     },
     actions: {
-        loadToys({commit}) {
-            return toyService.query()
+        loadToys({commit}, { filterBy }) {
+            return toyService.query(filterBy)
                 .then(toys => {
                     commit({type: 'setToys', toys})
                 })
