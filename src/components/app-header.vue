@@ -2,7 +2,7 @@
   <section class="app-header">
       <h1>Mister Toy</h1>
       <nav class="header-nav">
-          <a href="">To app</a>
+          <router-link to="/toy">To app</router-link>
           <a href="">To user profile</a>
       </nav>
   </section>

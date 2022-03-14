@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-
+import { toyStore } from './toy-store.js';
 const store = createStore({
     strict: true,
     state: {
@@ -15,6 +15,7 @@ const store = createStore({
 
     },
     modules: {
+        toyStore
     },
 });
 

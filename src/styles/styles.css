@@ -27,3 +27,31 @@ body {
     display: flex;
     gap: .5rem
 }
+
+.toy-filter {
+    height: 60px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toy-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+}
+.toy-preview {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.toy-preview h1,
+.toy-preview h2,
+.toy-preview h3,
+.toy-preview p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
