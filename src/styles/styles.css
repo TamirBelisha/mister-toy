@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.main-layout {
+    width: 90vw;
+    margin: 0 auto;
+}
+.main-content {
+    min-height: calc(100vh - 160px);
+}
+
+.app-header,
+.app-footer {
+    display: flex;
+    height: 80px;
+    background-color: beige;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    gap: .5rem
+}
