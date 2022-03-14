@@ -1,8 +1,8 @@
 <template>
   <section v-if="toy" class="toy-details">
-    <div>
+    <pre>
         {{toy}}
-    </div>
+    </pre>
     <div>
         <h1 v-if="toy._id">{{toy.name}}</h1>
         <h1 v-else>Add toy</h1>
@@ -11,6 +11,7 @@
             <input type="number" v-model="toy.price" placeholder="Price">
             <button>Submit</button>
         </form>
+        <button v-if="toy._id" @click="removeToy">Remove</button>
     </div>
   </section>
 </template>
@@ -32,6 +33,9 @@ export default {
     methods: {
         addToy() {
             this.$store.dispatch({type: 'addToy', toy: this.toy})
+        },
+        removeToy() {
+            this.$store.dispatch({type: 'removeToy', toyId: this.toy._id})
         }
     }
 }

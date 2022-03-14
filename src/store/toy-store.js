@@ -10,7 +10,6 @@ export const toyStore = {
             return JSON.parse(JSON.stringify(state.toys))
         },
         getCurrToy(state) {
-            console.log('state.currToy',state.currToy);
             return JSON.parse(JSON.stringify(state.currToy))
         },
     },
@@ -19,7 +18,6 @@ export const toyStore = {
             state.toys = toys
         },
         setCurrToy(state, { toy }) {
-            console.log('toy',toy);
             state.currToy = toy
         },
         updateToy(state, { toy }) {
