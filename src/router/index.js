@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import toyApp from '../views/toy-app.vue'
 import toyDetails from '../views/toy-details.vue'
 import toyEdit from '../views/toy-edit.vue'
+import toyDashboard from '../views/toy-dashboard.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
       name: 'toyEdit',
       component: toyEdit
     },
+    {
+      path: '/toy/dashboard',
+      name: 'toyDashboard',
+      component: toyDashboard
+    }
   ]
 })
 

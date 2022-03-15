@@ -8,7 +8,7 @@
       <label>In stock
         <input @change="setFilter" type="radio" value="true" v-model="filterBy.inStock" hidden>
       </label>
-      <select @change="setFilter" v-model="filterBy.label">
+      <select @change="setFilter" v-model="filterBy.label" multiple>
         <option value="" disabled>By label</option>
         <option value="">All</option>
         <option v-for="label in labels" :key="label">{{label}}</option>
@@ -31,7 +31,7 @@ export default {
       filterBy: {
         txt: '',
         inStock: '',
-        label: '',
+        label: [],
         sortBy: ''
       },
     }

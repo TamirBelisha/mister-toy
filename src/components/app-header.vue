@@ -3,7 +3,7 @@
       <h1>Mister Toy</h1>
       <nav class="header-nav">
           <router-link to="/toy">To app</router-link>
-          <a href="">To user profile</a>
+          <router-link to="/toy/dashboard">To Dashboard</router-link>
       </nav>
   </section>
 </template>
