@@ -1,11 +1,19 @@
+@font-face {
+    font-family: Oswald;
+    src: '../fonts/Oswald-Regular.ttf';
+}
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    font-family: Oswald, sans-serif;
 }
-
+a {
+    font-family: Oswald, sans-serif;
+    text-decoration: none;
+}
 .main-layout {
     width: 90vw;
     margin: 0 auto;

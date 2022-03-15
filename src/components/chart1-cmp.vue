@@ -1,5 +1,5 @@
 <template>
-  <DoughnutChart @click="showData" :chartData="testData" />
+  <DoughnutChart :chartData="testData" />
 </template>
 
 <script lang="ts">
@@ -27,6 +27,10 @@ export default defineComponent({
                         '#123E6B',
                         '#97B0C4',
                         '#A5C8ED',
+                        '#515a66',
+                        '#8960af',
+                        '#d3c1a5',
+                        '#71b18e'
                     ],
                 },
                 ],
@@ -55,9 +59,6 @@ export default defineComponent({
              this.testData.datasets[0].data.push((res[label].total / res[label].amount))
          }
         },
-       showData() {
-           console.log(this.testData);
-       }
    }
 })
 </script>

@@ -1,24 +1,28 @@
 <template>
   <section class="toy-filter">
     <div>
-      <input @input="setFilter" v-model="filterBy.txt" type="text" placeholder="Search">
+      <el-input @input="setFilter" v-model="filterBy.txt" type="text" placeholder="Search" style="width: 200px"/>
+      <el-select @change="setFilter" 
+      v-model="filterBy.label" 
+      multiple
+      style="width: 200px"
+      placeholder="Select label">
+        <el-option v-for="label in labels" :key="label" :label="label" :value="label"/>
+      </el-select>
+      <el-select @change="setFilter"
+      v-model="filterBy.sortBy"
+      style="width: 200px"
+      placeholder="Sort">
+        <el-option value="name">Name</el-option>
+        <el-option value="price">Price</el-option>
+        <el-option value="createdAt">Created</el-option>
+      </el-select>
       <label>All
         <input @change="setFilter" type="radio" value="" v-model="filterBy.inStock" hidden>
       </label> |
       <label>In stock
         <input @change="setFilter" type="radio" value="true" v-model="filterBy.inStock" hidden>
       </label>
-      <select @change="setFilter" v-model="filterBy.label" multiple>
-        <option value="" disabled>By label</option>
-        <option value="">All</option>
-        <option v-for="label in labels" :key="label">{{label}}</option>
-      </select>
-      <select @change="setFilter" v-model="filterBy.sortBy">
-        <option value="" disabled>Sort</option>
-        <option value="name">Name</option>
-        <option value="price">Price</option>
-        <option value="createdAt">Created</option>
-      </select>
     </div>
     <router-link to="/toy/edit">Add toy</router-link>
   </section>
