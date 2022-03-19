@@ -1,7 +1,7 @@
 <template>
     <section class="main-layout main-content">
         <toy-filter @setFilter="setFilter" />
-        <toy-list v-if="toys" :toys="toys" />
+        <toy-list @removeToy="removeToy" v-if="toys" :toys="toys" />
     </section>
 </template>
 
@@ -26,6 +26,9 @@ export default {
         setFilter(filterBy) {
             this.$store.dispatch({type: 'loadToys', filterBy})
         },
+        removeToy(toyId) {
+            this.$store.dispatch({type: 'removeToy', toyId})
+        }
     },
     computed: {
         toys() {

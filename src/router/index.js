@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import homePage from '../views/home-page.vue'
 import toyApp from '../views/toy-app.vue'
 import toyDetails from '../views/toy-details.vue'
 import toyEdit from '../views/toy-edit.vue'
@@ -8,6 +9,11 @@ import about from '../views/about.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: homePage
+    },
     {
       path: '/toy',
       name: 'App',

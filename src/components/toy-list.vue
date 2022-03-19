@@ -1,7 +1,7 @@
 <template>
   <section class="toy-list">
-    <article v-for="toy in toys" :key="toy._id" class="toy-preview">
-      <toy-preview :toy="toy" />
+    <article v-for="toy in toys" :key="toy._id" >
+      <toy-preview @removeToy="removeToy" :toy="toy" />
     </article>
   </section>
 </template>
@@ -14,6 +14,11 @@ export default {
     },
     components: {
         toyPreview
+    },
+    methods: {
+      removeToy(toyId) {
+        this.$emit('removeToy', toyId)
+      }
     }
 }
 </script>

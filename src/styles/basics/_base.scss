@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: cinzel, sans-serif;
+    line-height: lh(26px);
+
+    @media (max-width: 1300px) {
+        font-size: 13px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: $clr3;
+    color: $clr6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0 0 1rem;
+    line-height: lh(20px, 29px);
+}
+
+h1 {
+    font-size: rem(60px);
+}
+
+h2 {
+    font-size: rem(40px);
+}
+
+h3 {
+    font-size: rem(20px);
+}
+
+p {
+    font-size: rem(18px);
+    margin: 0 0 .6rem;
+}
+
+span {
+    font-size: .9em;
+}

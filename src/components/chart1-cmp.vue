@@ -22,15 +22,12 @@ export default defineComponent({
                 {
                     data: [],
                     backgroundColor: [
-                        '#77CEFF',
-                        '#0079AF',
-                        '#123E6B',
-                        '#97B0C4',
-                        '#A5C8ED',
-                        '#515a66',
-                        '#8960af',
-                        '#d3c1a5',
-                        '#71b18e'
+                        '#b4dfb2',
+                        '#b2dfd2',
+                        '#b2cbdf',
+                        '#bbb2df',
+                        '#dfb2bf',
+                        '#dfc7b2',
                     ],
                 },
                 ],
@@ -43,21 +40,25 @@ export default defineComponent({
              toy.labels.forEach(label => {
              if(!acc[label]) {
                  acc[label] = {
-                     total: toy.price,
+                     total: +toy.price,
                      amount: 1
                  }
              }
              else{
-                 acc[label].total += toy.price
+                 acc[label].total += +toy.price
                  acc[label].amount++
              }
              })
              return acc
          }, {})
+         console.log(res);
          for (const label in res) {
              this.testData.labels.push(label)
              this.testData.datasets[0].data.push((res[label].total / res[label].amount))
          }
+         console.log(this.$store.getters.getToys);
+         
+         console.log(this.testData)
         },
    }
 })

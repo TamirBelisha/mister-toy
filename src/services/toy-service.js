@@ -35,8 +35,8 @@ function getEmptyToy() {
     return Promise.resolve({
         _id: '',
         name: '',
-        price: 123,
-        labels: ['Doll', 'Battery Powered', 'Baby'],
+        price: 100,
+        labels: [],
         createdAt: Date.now(),
         inStock: true,
         reviews: []

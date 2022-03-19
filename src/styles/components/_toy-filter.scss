@@ -1,0 +1,29 @@
+.toy-filter {
+    height: rem(60px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid $clr2;
+
+    .inputs-container{
+        display: flex;
+        gap: .5rem;
+        width: 80%;
+    }
+
+    label {
+        cursor: pointer;
+        color: $clr1;
+        font-size: rem(20px);
+        border-bottom: 1px solid $clr3;
+    }
+
+    label:hover {
+        color: darken($clr1, 12%);
+        border-bottom: 1px solid $clr1;
+    }
+
+    a {
+        @include btn;
+    }
+}

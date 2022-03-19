@@ -1,6 +1,6 @@
 <template>
   <section class="toy-filter">
-    <div>
+    <div class="inputs-container">
       <el-input @input="setFilter" v-model="filterBy.txt" type="text" placeholder="Search" style="width: 200px"/>
       <el-select @change="setFilter" 
       v-model="filterBy.label" 
@@ -17,10 +17,10 @@
         <el-option value="price">Price</el-option>
         <el-option value="createdAt">Created</el-option>
       </el-select>
-      <label>All
+      <label title="Show all">All
         <input @change="setFilter" type="radio" value="" v-model="filterBy.inStock" hidden>
-      </label> |
-      <label>In stock
+      </label>
+      <label title="Show by stock">In stock
         <input @change="setFilter" type="radio" value="true" v-model="filterBy.inStock" hidden>
       </label>
     </div>

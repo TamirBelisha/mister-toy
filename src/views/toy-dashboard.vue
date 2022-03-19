@@ -1,10 +1,10 @@
 <template>
-    <section class="main-layout main-content">
+    <section class="main-layout main-content toy-dashboard">
         <article>
-            <h1>Toy prices by label</h1>
+            <h2>Toy prices by label</h2>
             <chart-one v-if="isToys"/>
             <br>
-            <h1>Toy inventory by label</h1>
+            <h2>Toy inventory by label</h2>
             <chart-two v-if="isToys"/>
         </article>
     </section>
@@ -35,8 +35,4 @@ export default {
 }
 </script>
 
-<style>
-h1 {
-    text-align: center;
-}
-</style>
+<style></style>

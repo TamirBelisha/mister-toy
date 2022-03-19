@@ -1,0 +1,22 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    border-bottom: 2px solid $clr2;
+    height: rem(70px);
+    margin-bottom: 1rem;
+
+    .header-nav {
+        display: flex;
+        gap: .5rem;
+    }
+    
+    .header-nav a{
+        @include btn
+    }
+
+    .logo {
+        color: $clr1;
+    }
+}

@@ -1,0 +1,14 @@
+.home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: $clr1;
+    }
+
+    div {
+        padding: 1rem;
+        border-bottom: 2px $clr2 solid;
+    }
+}

@@ -1,0 +1,31 @@
+.toy-preview {
+    @include toy-card;
+
+    a, .delete-btn {
+        @include btn;
+        margin-bottom: .5rem;
+        width: rem(80px);
+        padding: .2rem .4rem;
+        text-align: center;
+    }
+
+    .delete-btn {
+        background-color: #681111;
+    }
+    .delete-btn:hover {
+        background-color: darken(#681111, 8%)
+    }
+
+    p span:not(:last-child) {
+        &::after {
+            content: ', ';
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+}

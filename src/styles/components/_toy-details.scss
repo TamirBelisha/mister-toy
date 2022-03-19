@@ -1,0 +1,74 @@
+.toy-details, .toy-edit{
+    article {
+        display: flex;
+        align-items: center;
+        gap: 1rem
+    }
+
+    .details-card {
+        @include toy-card;
+        width: 100%;
+    }
+
+    h1 span{
+        color: darken($clr6, 12%);
+        font-size: .7em;
+    }
+
+    .is-in-stock {
+        color: $clr1;
+    }
+    .not-in-stock {
+        color: #681111;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem
+    }
+
+    a, .delete-btn {
+        @include btn;
+        margin-bottom: .5rem;
+        width: rem(80px);
+        padding: .2rem .4rem;
+        text-align: center;
+    }
+
+    .delete-btn {
+        background-color: #681111;
+    }
+    .delete-btn:hover {
+        background-color: darken(#681111, 8%)
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    p span {
+        color: darken($clr6, 6%);
+    }
+
+    .toy-labels span:not(:last-child) {
+        &::after {
+            content: ', ';
+        }
+    }
+
+    .toy-review {
+        background-color: rgba($clr1, 75%);
+        width: fit-content;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: .5rem;
+    }
+
+    .toy-review-container {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+}
